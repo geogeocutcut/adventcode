@@ -8,7 +8,7 @@ namespace adventofcode
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            IBot bot = new BotDay6();
+            IBot bot = new BotDay7();
             bot.LoadData();
             bot.Excute();
         }
