@@ -9,30 +9,33 @@ namespace adventofcode._2022.bots
 {
     public class BotDay6:IBot
     {
-        HashSet<char> window = new HashSet<char>(4);
-        int maxtmp = 0;
+        List<char> window = new List<char>(14);
+        HashSet<char> check = new HashSet<char>();
+        int count = 14;
         public void LoadData()
         {
-            string path = @"./2022/inputs/day1.txt";
+            string path = @"./2022/inputs/day6.txt";
             foreach (string line in System.IO.File.ReadLines(path))
             {
                 var length = line.Length;
-                var marker = line.Substring(0, 4);
-                window=marker.ToHashSet();
-                for (int i=4; i<length; i++)
+                var marker = line.Substring(0, 14);
+                window=marker.ToList();
+                for (int i=14; i<length; i++)
                 {
-                    if(window.Count<4)
-                    {
-                        window.Add()
-                    }
+                    check = new HashSet<char>(window);
+                    Console.Write(check.Count);
+                    if (check.Count == 14)
+                        break;
+                    window.RemoveAt(0);
+                    window.Add(line[i]);
+                    count += 1;
                 }
             }
         }
 
         public void Excute()
         {
-            Console.WriteLine(elvesCal.OrderByDescending(x=>x).Take(3).Sum());
-        }
 
+        }
     }
 }
