@@ -88,7 +88,6 @@ namespace adventofcode._2022.bots
             Console.WriteLine(nodes.Where(n=> n.typeNode=='R' && n.weight<100000).Sum(n=>n.weight));
             Console.WriteLine(nodes.Where(n => n.typeNode == 'R' && n.weight > sizeToFound).OrderBy(n => n.weight).FirstOrDefault().weight);
         }
-
     }
 
     public class node
