@@ -1,4 +1,5 @@
 ﻿using adventofcode._2022.bots;
+using adventofcode._2024._05;
 using System;
 
 namespace adventofcode
@@ -8,7 +9,7 @@ namespace adventofcode
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            IBot bot = new BotDay9();
+            IBot bot = new Day5a();
             bot.LoadData();
             bot.Excute();
         }
